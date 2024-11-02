@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📖 La Biblia RVR 1960</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Biblia Reina Valera 1960</h1>
+        <header>
+            <input type="text" id="search" placeholder="Busca tu pasaje biblico (ej: 1 Timoteo 3:15-16)" onkeyup="showSuggestions()">
+            <div id="suggestions" class="suggestions-container"></div>
+        </header>
+        <div class="row">
+            <div class="selector">
+                <label>Testamento</label>
+                <select id="testament" onchange="loadBooks()">
+                    <option value="" disabled selected>Seleccionar...</option>
+                    <option value="at">AT</option>
+                    <option value="nt">NT</option>
+                </select>
+            </div>
+            <div class="selector">
+                <label>Libro</label>
+                <select id="book" onchange="loadChapters()">
+                    <option value="" disabled selected>Seleccionar...</option>
+                </select>
+            </div>
+            <div class="selector">
+                <label>Capítulo</label>
+                <select id="chapter" onchange="loadVerses()">
+                    <option value="" disabled selected>Seleccionar...</option>
+                </select>
+            </div>
+            <div class="selector">
+                <label>Versículo</label>
+                <select id="verse" onchange="displayVerse()">
+                    <option value="" disabled selected>Seleccionar...</option>
+                </select>
+            </div>
+        </div>
+        <section id="display-area">
+            <p id="verse-display">Selecciona un versículo para mostrar el texto.</p>
+            <div class="navigation" id="navigation-controls" style="display: none;">
+                <button onclick="navigateChapter('prev')"><img src="./arrow-left.svg" alt="Anterior"></button>
+                <button onclick="navigateChapter('next')"><img src="./arrow-right.svg" alt="Siguiente"></button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
