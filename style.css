@@ -112,11 +112,21 @@ button:hover {
     z-index: 10;
 }
 
+/* new change .select  126,127, 131-Color*/
+.select {
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
 .suggestion-item {
     padding: 10px;
     cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
 }
 
 .suggestion-item:hover {
-    background-color: #f0f0f0;
+    background-color: #e0e0e0;
 }
