@@ -35,7 +35,7 @@ function cargarLibro(libro) {
         }
 
         const script = document.createElement("script");
-        script.src = `./libros/${libro}.js`;
+        script.src = `./Libros/${libro}.js`;
         script.onload = resolve;
         script.onerror = () => reject(new Error(`No se pudo cargar el libro ${libro}`));
         document.head.appendChild(script);
