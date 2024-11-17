@@ -196,7 +196,7 @@ function showSuggestions() {
             suggestion.textContent = `${formattedBook}${chapterDisplay}${verseDisplay}`;
             
             // Añadir evento para seleccionar la sugerencia
-            suggestion.addEventListener("click", () => {
+            suggestion.addEventListener("touchstart", () => {
                 document.getElementById("search").value = suggestion.textContent;
                 suggestionsContainer.innerHTML = "";
                 searchVerse();  // Llama a la función de búsqueda cuando selecciona una sugerencia
